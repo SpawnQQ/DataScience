@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+import numpy
 import math 
 from matplotlib import pyplot
 
@@ -9,16 +9,16 @@ def division(x,y):
 
 
 def grafico(x):
-	return math.sin(x)
+	return x**x
 
-x=range(-100,100)
+x=numpy.linspace(-10,10,200)
 
 pyplot.plot(x,[grafico(i) for i in x])
 
 pyplot.axhline(0, color="gray")
 pyplot.axvline(0, color="gray")
 
-pyplot.xlim(-50, 50)
-pyplot.ylim(-10, 10)
+pyplot.xlim(-10, 10)
+pyplot.ylim(-2, 2)
 
 pyplot.show()
